@@ -33,6 +33,8 @@ IGNORE_VIOLATIONS = {
     'CONFIG_EFI_DISABLE_PCI_DMA', # enabling this breaks boot with no visible error messages to debug (https://github.com/siderolabs/talos/issues/8743)
     'CONFIG_INET_DIAG', # last vulnerability prior to v4.1. Required for CNIs such as Cilium to terminate sockets. (https://github.com/siderolabs/pkgs/issues/1028)
     'CONFIG_IOMMU_DEFAULT_DMA_STRICT', # performance impact https://github.com/siderolabs/talos/issues/9531
+    'CONFIG_UBSAN_SANITIZE_ALL', # removed from kernel, see https://lore.kernel.org/all/20240202101642.156588-4-keescook@chromium.org/
+    'CONFIG_AMD_IOMMU_V2', # removed from kernel, see https://lore.kernel.org/linux-iommu/20230815103255.565295-2-vasant.hegde@amd.com/
 }
 
 """
