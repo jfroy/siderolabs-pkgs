@@ -31,6 +31,9 @@ IGNORE_VIOLATIONS = {
     'CONFIG_SECURITY_SELINUX_DEVELOP', # SELinux enabled, but permissive unless enforcing=1. TODO: force enforcing mode when complete
     'CONFIG_SPECULATION_MITIGATIONS', # Renamed in the kernel to 'CONFIG_CPU_MITIGATIONS'
     'CONFIG_EFI_DISABLE_PCI_DMA', # enabling this breaks boot with no visible error messages to debug (https://github.com/siderolabs/talos/issues/8743)
+    'CONFIG_UBSAN_SANITIZE_ALL', # removed from kernel, see https://lore.kernel.org/all/20240202101642.156588-4-keescook@chromium.org/
+    'CONFIG_AMD_IOMMU_V2', # removed from kernel, see https://lore.kernel.org/linux-iommu/20230815103255.565295-2-vasant.hegde@amd.com/
+    'CONFIG_INET_DIAG', # required for cilium socket-lb fast failover, see https://docs.cilium.io/en/latest/network/kubernetes/kubeproxy-free/#limitations
 }
 
 """
