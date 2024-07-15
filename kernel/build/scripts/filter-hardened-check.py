@@ -34,6 +34,9 @@ IGNORE_VIOLATIONS = {
     'CONFIG_SLAB_MERGE_DEFAULT', # fixed in main, backwards compat in release-1.7
     'CONFIG_PAGE_TABLE_CHECK', # fixed in main, backwards compat in release-1.7
     'CONFIG_PAGE_TABLE_CHECK_ENFORCED', # fixed in main, backwards compat in release-1.7
+    'CONFIG_UBSAN_SANITIZE_ALL', # removed from kernel, see https://lore.kernel.org/all/20240202101642.156588-4-keescook@chromium.org/
+    'CONFIG_AMD_IOMMU_V2', # removed from kernel, see https://lore.kernel.org/linux-iommu/20230815103255.565295-2-vasant.hegde@amd.com/
+    'CONFIG_INET_DIAG', # required for cilium socket-lb fast failover, see https://docs.cilium.io/en/latest/network/kubernetes/kubeproxy-free/#limitations
 }
 
 """
