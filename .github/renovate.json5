@@ -6,7 +6,13 @@
         ":semanticCommitScopeDisabled",
         "schedule:earlyMondays"
     ],
-    "prHeader": "Update Request | Renovate Bot",
+    "dependencyDashboard": true,
+    "dependencyDashboardTitle": "Renovate Dashboard 🤖",
+    "suppressNotifications": [
+        "prEditedNotification",
+        "prIgnoreNotification"
+    ],
+    "rebaseWhen": "conflicted",
     "regexManagers": [
         {
             "fileMatch": [
