@@ -137,7 +137,7 @@ vars:
   nvidia_driver_sha256: b96ed0ab2c9d03f76ff85098d08523d4aaa041c580565a7905fe6add69ba2569
   nvidia_driver_sha512: 91f729491b777fe2dd48db76c1f9326a36b13acb162ecc3b6ec5a3ee09a03d075a4f2bea0824cffcfde2d5bfaeb2d11ff52246270906c447299352ad6790a366
 
-  # renovate: datasource=git-tags extractVersion=^openssl-(?<version>.*)$ depName=git://git.openssl.org/openssl.git
+  # renovate: datasource=github-releases depName=openssl/openssl
   openssl_version: 3.2.1
   openssl_sha256: 83c7329fe52c850677d75e5d0b0ca245309b97e8ecbcfdc1dfdc4ab9fac35b39
   openssl_sha512: bab2b2419319f1feffaba4692f03edbf13b44d1090c6e075a2d69dad67a2d51e64e6edbf83456a26c83900a726d20d2c4ee4ead9c94b322fd0b536f3b5a863c4
