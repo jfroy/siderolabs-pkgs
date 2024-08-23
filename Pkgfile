@@ -73,7 +73,7 @@ vars:
   linux_sha512: dd6061c5871d7b313e1b0eec791444b911f9d9d5e28b1d7a81a265708688808c157adfba92459511e9b786d09e3f96f5bc3c03980360061344ad8e225e165f6a
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/utils/kernel/kmod/kmod.git
-  kmod_version: 32
+  kmod_version: 33
   kmod_sha256: 630ed0d92275a88cb9a7bf68f5700e911fdadaf02e051cf2e4680ff8480bd492
   kmod_sha512: 29162135aabd025dff178a4147a754b5da5964855dbeee65ca867dec3b84437f35c1c97f0f027e974a021d3ee9a4940309a716859cc3cfe93c7ed0aada338f24
 
