@@ -149,7 +149,7 @@ vars:
   runc_sha512: cd8efd87f62a73d6bbfa83e950ef41106de0080169956c4a106a9f291953051488f3c13348a8e6b5a83d18ba666e6878cf1e07b6217ca641bdb282aa257e6976
 
   # renovate: datasource=git-tags extractVersion=^tag-(?<version>.*)$ depName=git://repo.or.cz/socat.git
-  socat_version: 1.8.0.0
+  socat_version: 1.8.0.1
   socat_sha256: 6010f4f311e5ebe0e63c77f78613d264253680006ac8979f52b0711a9a231e82
   socat_sha512: edf459a9f1907a14025e13b3101ad29787f9a72795cffcd00017ce98847562884db29a95b9ae478a6a50868137548b142947c43fb18e975eb5853a763c42902c
 
