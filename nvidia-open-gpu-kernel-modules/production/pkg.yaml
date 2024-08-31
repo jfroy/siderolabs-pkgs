@@ -34,7 +34,7 @@ steps:
       - |
         cd /nvidia-driver/kernel-open
 
-        make -j $(nproc) SYSSRC=/src
+        make -j $(nproc) SYSSRC=/src NV_EXCLUDE_KERNEL_MODULES="nvidia-drm"
       - |
         cd /gdrcopy/src/gdrdrv
         # Build the kernel module with NVIDIA driver sources and kernel 6.12 compatibility flags
