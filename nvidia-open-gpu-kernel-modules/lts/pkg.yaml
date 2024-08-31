@@ -25,7 +25,7 @@ steps:
       - |
         cd kernel-open
 
-        make -j $(nproc) SYSSRC=/src
+        make -j $(nproc) SYSSRC=/src NV_EXCLUDE_KERNEL_MODULES="nvidia-drm"
     install:
       - |
         cd kernel-open
