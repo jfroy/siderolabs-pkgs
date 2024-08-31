@@ -22,7 +22,7 @@ steps:
         tar xf open-gpu-kernel-modules.tar.gz --strip-components=1
     build:
       - |
-        make -j $(nproc) SYSSRC=/src
+        make -j $(nproc) SYSSRC=/src NV_EXCLUDE_KERNEL_MODULES="nvidia-drm"
     install:
       - |
         mkdir -p /rootfs/lib/modules/$(cat /src/include/config/kernel.release)/
