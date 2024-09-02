@@ -11,8 +11,8 @@ vars:
   cni_sha512: 349e0b2fa55856774f7f04d0f6f87ea393e6efd37fd0b6a1e9305ab973a0b3dec77bac25770667d4f81d55459650439600ea353ba6069d7d9e8078a9dac2fc6e
 
   # renovate: datasource=github-tags depName=containerd/containerd
-  containerd_version: v1.7.20
-  containerd_ref: 8fc6bcff51318944179630522a095cc9dbf9f353
+  containerd_version: v1.7.21
+  containerd_ref: 472731909fa34bd7bc9c087e4c27943f9835f111
   containerd_sha256: 91685cebd50e3f353a402adadf61e2a6aeda3f63754fa0fcc978a043e00acac4
   containerd_sha512: 39ecc27246f4f9e9827df2ef52574287b16cb5da0ffd954a4bfa29f063f453ec97feb82cc30ff27410e091ba535c1a941ddd10021256c71021b397eb86024f12
 
