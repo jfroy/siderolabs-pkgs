@@ -17,7 +17,7 @@ vars:
   containerd_sha512: 39ecc27246f4f9e9827df2ef52574287b16cb5da0ffd954a4bfa29f063f453ec97feb82cc30ff27410e091ba535c1a941ddd10021256c71021b397eb86024f12
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/utils/cryptsetup/cryptsetup.git
-  cryptsetup_version: 2.7.1
+  cryptsetup_version: 2.7.5
   cryptsetup_sha256: bb3f2ce037500563b376d9e5ca7c5f45780ea828ce3dcf2ae765bcb8df9f15d9
   cryptsetup_sha512: b4c37fbb485f2cac634c919974969b3e1d3e07597f8c42d569b5c6b55b7f9f74b11a7a6748ebb907a3becacc73d13eb4470422283def09f26aa0fe2aacb4ad5d
 
