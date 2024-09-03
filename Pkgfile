@@ -133,9 +133,9 @@ vars:
   musl_sha512: 498ec5d7941194a8806f4d42f0f6d218c862996ef1398b737d0d06995e0b7a6574b240a48088f6b84016b14b2776fe463f829dcb11149cdfc1023d496b235c55
 
   # cannot use renovate from nvidia/open-gpu-kernel-modules as it will pick up all sorts of pre-release versions
-  nvidia_driver_version: 550.107.02
-  nvidia_driver_sha256: b96ed0ab2c9d03f76ff85098d08523d4aaa041c580565a7905fe6add69ba2569
-  nvidia_driver_sha512: 91f729491b777fe2dd48db76c1f9326a36b13acb162ecc3b6ec5a3ee09a03d075a4f2bea0824cffcfde2d5bfaeb2d11ff52246270906c447299352ad6790a366
+  nvidia_driver_version: 550.90.07
+  nvidia_driver_sha256: a1c2a2fa7346ffa9ff6f0ba5d924df73e4bb4a6650a2303a7b337f8b2b536e13
+  nvidia_driver_sha512: c73d552fd5a02dcceeae613a8e433280b3ea4d78faa7af12b806e2bac76a5fbc768eb46f3ee53b71dd06b78a23cfef361006a178451de6c408891f45a424b77d
 
   # renovate: datasource=github-releases depName=openssl/openssl
   openssl_version: 3.2.1
