@@ -119,7 +119,7 @@ vars:
   linux_firmware_sha512: 6c857897f466fafe5750a22f72d10958505f682eeba1e525bf102aaa067fa27f543e692e1ba52591ed9024688743a2936505e3ce66e1dd947b6de80111d8ee25
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://sourceware.org/git/lvm2.git
-  lvm2_version: 2_03_22
+  lvm2_version: 2_03_26
   lvm2_sha256: 4c5a6923bd1ace7ce04474608a84937ce053ba91b1ace9f0b0017268e732dc7c
   lvm2_sha512: 17cd24ceee8026481566824b688dafd03ec816201d5cb3549cb7fc8a36f4cdaa982faaef4dcd26debfe775dea5ffa2744798164314ea6dc99a84f8ccccfc33ff
 
