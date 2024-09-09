@@ -278,4 +278,4 @@ vars:
   gdrcopy_sha256: c6d5ebb7dabb89d798f27609511735595004da73af28d93ac041bb5290c4cbec
   gdrcopy_sha512: eb45965de6660bd33173cc150a373c185113e98aa66b8ead90871cf358c3423c3e5757438b841b38c8c2a993789dfc7f242a25e2e2b20f1dde2b592b646d2a30
 labels:
-  org.opencontainers.image.source: https://github.com/siderolabs/pkgs
+  org.opencontainers.image.source: https://github.com/jfroy/siderolabs-pkgs
