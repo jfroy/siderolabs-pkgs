@@ -25,8 +25,6 @@ steps:
       - |
         cd kernel-open
 
-        patch -p1 </pkg/patches/nvtophys.patch
-
         make -j $(nproc) SYSSRC=/src NV_EXCLUDE_KERNEL_MODULES="nvidia-drm"
     install:
       - |
