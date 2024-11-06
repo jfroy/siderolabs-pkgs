@@ -13,8 +13,8 @@ steps:
     # {{ else }} This in fact is YAML comment, but Go templating instruction is evaluated by bldr
       - url: https://developer.download.nvidia.com/compute/nvidia-driver/redist/nvidia_driver/linux-x86_64/nvidia_driver-linux-x86_64-{{ .nvidia_driver_production_version }}-archive.tar.xz
         destination: nvidia.tar.xz
-        sha256: 7959e9e0e15863c9242f8a0bda0b3b67b39701956890ff159961f59e89f92158
-        sha512: 89a4249bce2c15af56911afa6998c355d6522e2e7493e80ed9241a9d5009ccf2522bf7bceffc03673600bbfd0d89f3a46a3c21fb0f4977e6dc674648b4c6caea
+        sha256: 301e7bfb7868eeae74b076068f0ebc00b3732d718084a78261f9c862975d1058
+        sha512: 4b1dc109a0e4055cd033b605e1939811a3d1aff7dabb49d72822d719a9fd74ce7d838c6a941d1bd82b8fc43637ac5b05f5421ae389026b6bc93ec438e2d14a59
     # {{ end }} This in fact is YAML comment, but Go templating instruction is evaluated by bldr
     env:
       ARCH: {{ if eq .ARCH "aarch64"}}arm64{{ else if eq .ARCH "x86_64" }}x86_64{{ else }}unsupported{{ end }}
