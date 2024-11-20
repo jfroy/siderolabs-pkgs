@@ -11,6 +11,7 @@ spec:
     - cryptsetup
     - dosfstools
     - eudev
+    - e2fsprogs
     - fhs
     - flannel-cni
     - grub
