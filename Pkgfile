@@ -187,9 +187,9 @@ vars:
   xfsprogs_sha512: c597453759c400690810971f0b2daf0e4e22c74270b0f9800e2235da5e5c1383b59bc1176c5bba0023f74b623020fb51c62f0e98a74885cf3a8336e0b81c9023
 
   # renovate: datasource=github-tags extractVersion=^zfs-(?<version>.*)$ depName=openzfs/zfs
-  zfs_version: 2.2.6
-  zfs_sha256: c92e02103ac5dd77bf01d7209eabdca55c7b3356aa747bb2357ec4222652a2a7
-  zfs_sha512: c217a3397b67d7239bc30bc492d58fff96bb29c9cf73e390d1787a4fb787cb297557e594a926453fed11faaab80363d40853af271f8ee18ce9a317dfde4c6745
+  zfs_version: 2.3.0-rc3
+  zfs_sha256: 207a3e95902c0c8b4792cbfa11a7405f155c0023702d0f0b42650da5b38d852a
+  zfs_sha512: 1ac53d3a006580f4a32fa33dddd6600d8abac401ed9fc86a2950a8241e0a9dc4a8954a32c44b28b10f22ba7c5cbd8871d9f21c13ccc291c366e9745e83431723
 
   # renovate: datasource=git-tags depName=https://gitlab.com/apparmor/apparmor.git
   apparmor_version: v3.1.7
