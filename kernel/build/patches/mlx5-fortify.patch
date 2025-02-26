@@ -1,0 +1,13 @@
+diff --git a/drivers/net/ethernet/mellanox/mlx5/core/en_tx.c b/drivers/net/ethernet/mellanox/mlx5/core/en_tx.c
+index f8c7912ab..40ed9d37e 100644
+--- a/drivers/net/ethernet/mellanox/mlx5/core/en_tx.c
++++ b/drivers/net/ethernet/mellanox/mlx5/core/en_tx.c
+@@ -448,7 +448,7 @@ mlx5e_sq_xmit_wqe(struct mlx5e_txqsq *sq, struct sk_buff *skb,
+ 	eseg->mss = attr->mss;
+ 
+ 	if (ihs) {
+-		u8 *start = eseg->inline_hdr.start;
++		u8 *start = eseg->inline_hdr.data;
+ 
+ 		if (unlikely(attr->hopbyhop)) {
+ 			/* remove the HBH header.
