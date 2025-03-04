@@ -1,6 +1,6 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED, PLEASE DO NOT EDIT.
 #
-# Generated on 2025-03-11T13:22:53Z by kres ec5ec04.
+# Generated on 2025-03-03T23:16:03Z by kres 1281806.
 
 # common variables
 
@@ -86,6 +86,7 @@ TARGETS += xfsprogs
 TARGETS += kernel
 TARGETS += drbd-pkg
 TARGETS += gasket-driver-pkg
+TARGETS += mellanox-mstflint-pkg
 TARGETS += nvidia-open-gpu-kernel-modules-lts-pkg
 TARGETS += nvidia-open-gpu-kernel-modules-production-pkg
 TARGETS += zfs-pkg

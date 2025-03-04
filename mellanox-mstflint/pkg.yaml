@@ -1,0 +1,34 @@
+name: mellanox-mstflint-pkg
+variant: scratch
+shell: /toolchain/bin/bash
+dependencies:
+  - stage: kernel-build
+steps:
+  - sources:
+      - url: https://github.com/Mellanox/mstflint/releases/download/v{{ .mellanox_mstflint_version }}/kernel-mstflint-{{ .mellanox_mstflint_version }}.tar.gz
+        destination: kernel-mstflint.tgz
+        sha256: "{{ .mellanox_mstflint_sha256 }}"
+        sha512: "{{ .mellanox_mstflint_sha512 }}"
+    env:
+      ARCH: {{ if eq .ARCH "aarch64"}}arm64{{ else if eq .ARCH "x86_64" }}x86_64{{ else }}unsupported{{ end }}
+    prepare:
+      - |
+        tar -xzf kernel-mstflint.tgz --strip-components=1
+    build:
+      - |
+        make KPVER=$(cat /src/include/config/kernel.release) KSRC=/src
+    install:
+      - |
+        mkdir -p /rootfs/lib/modules/$(cat /src/include/config/kernel.release)/
+        cp /src/modules.order /rootfs/lib/modules/$(cat /src/include/config/kernel.release)/
+        cp /src/modules.builtin /rootfs/lib/modules/$(cat /src/include/config/kernel.release)/
+        cp /src/modules.builtin.modinfo /rootfs/lib/modules/$(cat /src/include/config/kernel.release)/
+
+        make -C /src M=$PWD modules_install INSTALL_MOD_PATH=/rootfs INSTALL_MOD_DIR=extras INSTALL_MOD_STRIP=1
+    test:
+      - |
+        # https://www.kernel.org/doc/html/v4.15/admin-guide/module-signing.html#signed-modules-and-stripping
+        find /rootfs/lib/modules -name '*.ko' -exec grep -FL '~Module signature appended~' {} \+
+finalize:
+  - from: /rootfs
+    to: /
