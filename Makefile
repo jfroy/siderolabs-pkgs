@@ -100,6 +100,7 @@ TARGETS += kernel
 TARGETS += drbd-pkg
 TARGETS += ena-pkg
 TARGETS += gasket-driver-pkg
+TARGETS += mellanox-mstflint-pkg
 TARGETS += nvidia-open-gpu-kernel-modules-lts-pkg
 TARGETS += nvidia-open-gpu-kernel-modules-production-pkg
 TARGETS += xdma-driver-pkg
