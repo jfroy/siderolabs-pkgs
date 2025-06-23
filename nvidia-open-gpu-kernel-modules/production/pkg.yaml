@@ -27,6 +27,9 @@ steps:
       - |
         chmod +x nvidia.run
         ./nvidia.run --extract-only --target /nvidia-driver
+
+        cd /nvidia-driver
+        patch -p1 < /pkg/patches/nvidia-linux-6.18.patch
       - |
         mkdir -p /gdrcopy
         tar xf gdrcopy.tar.gz -C /gdrcopy --strip-components=1
