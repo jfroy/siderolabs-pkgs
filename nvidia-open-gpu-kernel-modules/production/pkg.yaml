@@ -7,13 +7,13 @@ dependencies:
 steps:
   - sources:
     # {{ if eq .ARCH "aarch64" }} This in fact is YAML comment, but Go templating instruction is evaluated by bldr
-      - url: https://developer.download.nvidia.com/compute/nvidia-driver/redist/nvidia_driver/linux-sbsa/nvidia_driver-linux-sbsa-{{ .nvidia_driver_production_version }}-archive.tar.xz
-        destination: nvidia.tar.xz
+      - url: https://us.download.nvidia.com/tesla/{{ .nvidia_driver_production_version }}/NVIDIA-Linux-aarch64-{{ .nvidia_driver_production_version }}.run
+        destination: nvidia.run
         sha256: "{{ .nvidia_driver_production_arm64_sha256 }}"
         sha512: "{{ .nvidia_driver_production_arm64_sha512 }}"
     # {{ else }} This in fact is YAML comment, but Go templating instruction is evaluated by bldr
-      - url: https://developer.download.nvidia.com/compute/nvidia-driver/redist/nvidia_driver/linux-x86_64/nvidia_driver-linux-x86_64-{{ .nvidia_driver_production_version }}-archive.tar.xz
-        destination: nvidia.tar.xz
+      - url: https://us.download.nvidia.com/tesla/{{ .nvidia_driver_production_version }}/NVIDIA-Linux-x86_64-{{ .nvidia_driver_production_version }}.run
+        destination: nvidia.run
         sha256: "{{ .nvidia_driver_production_amd64_sha256 }}"
         sha512: "{{ .nvidia_driver_production_amd64_sha512 }}"
     # {{ end }} This in fact is YAML comment, but Go templating instruction is evaluated by bldr
@@ -21,15 +21,16 @@ steps:
       ARCH: {{ if eq .ARCH "aarch64"}}arm64{{ else if eq .ARCH "x86_64" }}x86_64{{ else }}unsupported{{ end }}
     prepare:
       - |
-        tar xf nvidia.tar.xz --strip-components=1
+        chmod +x nvidia.run
+        ./nvidia.run --extract-only --target nvidia
     build:
       - |
-        cd kernel-open
+        cd nvidia/kernel-open
 
         make -j $(nproc) SYSSRC=/src NV_EXCLUDE_KERNEL_MODULES="nvidia-drm"
     install:
       - |
-        cd kernel-open
+        cd nvidia/kernel-open
 
         mkdir -p /rootfs/usr/lib/modules/$(cat /src/include/config/kernel.release)/
         cp /src/modules.order /rootfs/usr/lib/modules/$(cat /src/include/config/kernel.release)/
